@@ -376,7 +376,9 @@
                         <small style="font-size: 0.8em;">60 Menit</small>
                         <div>${startHour}:00 - ${endHour}:00</div>
                         <div class="price">{{ 'Rp ' . number_format($news->price, 2, ',', '.') }}</div>
-                        <div class="status">${isBooked ? 'Booked' : 'Available'}</div>
+                        <div class="status" style="color: ${isBooked ? 'red' : ''};">
+    ${isBooked ? 'Booked' : 'Available'}
+</div>
                     `;
 
                     // Tambahkan class "booked" jika sudah dipesan
